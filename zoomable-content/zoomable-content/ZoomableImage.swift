@@ -35,11 +35,14 @@ public struct ZoomableImage: View {
         image
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: size.width + blurRadius, height: size.height + blurRadius)
+            .frame(
+                width: size.width + blurRadius,
+                height: size.height + blurRadius * 2)
             .offset(x: offsetX)
             .clipped()
             .blur(radius: blurRadius / 2)
-            .padding(-blurRadius / 2)
+            .padding(.horizontal, -blurRadius / 2)
+            .padding(.vertical, -blurRadius)
             .overlay {
                 Rectangle()
                     .fill(.black)
