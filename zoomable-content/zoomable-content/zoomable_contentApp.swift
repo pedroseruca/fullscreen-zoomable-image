@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ZoomableImage
 
 @main
 struct zoomable_contentApp: App {
@@ -15,5 +16,14 @@ struct zoomable_contentApp: App {
                 Image("iphones")
             }
         }
+    }
+}
+
+struct ZoomableImage_Previews: PreviewProvider {
+    static var previews: some View {
+        ZoomableImage {
+            Image("iphones")
+        }
+        .ignoresSafeArea()
     }
 }

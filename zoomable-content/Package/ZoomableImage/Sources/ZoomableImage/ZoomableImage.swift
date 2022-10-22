@@ -65,12 +65,3 @@ public struct ZoomableImage: View {
         }
     }
 }
-
-struct ZoomableImage_Previews: PreviewProvider {
-    static var previews: some View {
-        ZoomableImage {
-            Image("iphones")
-        }
-        .ignoresSafeArea()
-    }
-}
