@@ -14,27 +14,8 @@
 		12FFA6282904490500719F77 /* zoomable_contentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA6232904490500719F77 /* zoomable_contentApp.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		12FFA5F22904086800719F77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12FFA5D92904086600719F77 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12FFA5E02904086600719F77;
-			remoteInfo = "zoomable-content";
-		};
-		12FFA5FC2904086800719F77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12FFA5D92904086600719F77 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12FFA5E02904086600719F77;
-			remoteInfo = "zoomable-content";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		12FFA5E12904086600719F77 /* zoomable-content.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zoomable-content.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		12FFA5F12904086800719F77 /* zoomable-contentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zoomable-contentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		12FFA5FB2904086800719F77 /* zoomable-contentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zoomable-contentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FFA61E2904490400719F77 /* ZoomableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableImage.swift; sourceTree = "<group>"; };
 		12FFA61F2904490400719F77 /* ZoomGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomGesture.swift; sourceTree = "<group>"; };
 		12FFA6202904490400719F77 /* PinchZoomContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchZoomContext.swift; sourceTree = "<group>"; };
@@ -44,20 +25,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		12FFA5DE2904086600719F77 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		12FFA5EE2904086800719F77 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		12FFA5F82904086800719F77 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,8 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				12FFA5E12904086600719F77 /* zoomable-content.app */,
-				12FFA5F12904086800719F77 /* zoomable-contentTests.xctest */,
-				12FFA5FB2904086800719F77 /* zoomable-contentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,42 +100,6 @@
 			productReference = 12FFA5E12904086600719F77 /* zoomable-content.app */;
 			productType = "com.apple.product-type.application";
 		};
-		12FFA5F02904086800719F77 /* zoomable-contentTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12FFA6082904086800719F77 /* Build configuration list for PBXNativeTarget "zoomable-contentTests" */;
-			buildPhases = (
-				12FFA5ED2904086800719F77 /* Sources */,
-				12FFA5EE2904086800719F77 /* Frameworks */,
-				12FFA5EF2904086800719F77 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				12FFA5F32904086800719F77 /* PBXTargetDependency */,
-			);
-			name = "zoomable-contentTests";
-			productName = "zoomable-contentTests";
-			productReference = 12FFA5F12904086800719F77 /* zoomable-contentTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		12FFA5FA2904086800719F77 /* zoomable-contentUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12FFA60B2904086800719F77 /* Build configuration list for PBXNativeTarget "zoomable-contentUITests" */;
-			buildPhases = (
-				12FFA5F72904086800719F77 /* Sources */,
-				12FFA5F82904086800719F77 /* Frameworks */,
-				12FFA5F92904086800719F77 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				12FFA5FD2904086800719F77 /* PBXTargetDependency */,
-			);
-			name = "zoomable-contentUITests";
-			productName = "zoomable-contentUITests";
-			productReference = 12FFA5FB2904086800719F77 /* zoomable-contentUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,14 +113,6 @@
 					12FFA5E02904086600719F77 = {
 						CreatedOnToolsVersion = 14.0.1;
 						LastSwiftMigration = 1400;
-					};
-					12FFA5F02904086800719F77 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 12FFA5E02904086600719F77;
-					};
-					12FFA5FA2904086800719F77 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 12FFA5E02904086600719F77;
 					};
 				};
 			};
@@ -209,8 +130,6 @@
 			projectRoot = "";
 			targets = (
 				12FFA5E02904086600719F77 /* zoomable-content */,
-				12FFA5F02904086800719F77 /* zoomable-contentTests */,
-				12FFA5FA2904086800719F77 /* zoomable-contentUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,20 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				12FFA6272904490500719F77 /* Preview Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		12FFA5EF2904086800719F77 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		12FFA5F92904086800719F77 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,34 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		12FFA5ED2904086800719F77 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		12FFA5F72904086800719F77 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		12FFA5F32904086800719F77 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 12FFA5E02904086600719F77 /* zoomable-content */;
-			targetProxy = 12FFA5F22904086800719F77 /* PBXContainerItemProxy */;
-		};
-		12FFA5FD2904086800719F77 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 12FFA5E02904086600719F77 /* zoomable-content */;
-			targetProxy = 12FFA5FC2904086800719F77 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		12FFA6032904086800719F77 /* Debug */ = {
@@ -457,82 +335,6 @@
 			};
 			name = Release;
 		};
-		12FFA6092904086800719F77 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3FQH2799X;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pedroseruca.zoomable-contentTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zoomable-content.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zoomable-content";
-			};
-			name = Debug;
-		};
-		12FFA60A2904086800719F77 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3FQH2799X;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pedroseruca.zoomable-contentTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zoomable-content.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zoomable-content";
-			};
-			name = Release;
-		};
-		12FFA60C2904086800719F77 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3FQH2799X;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pedroseruca.zoomable-contentUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "zoomable-content";
-			};
-			name = Debug;
-		};
-		12FFA60D2904086800719F77 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3FQH2799X;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pedroseruca.zoomable-contentUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "zoomable-content";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -550,24 +352,6 @@
 			buildConfigurations = (
 				12FFA6062904086800719F77 /* Debug */,
 				12FFA6072904086800719F77 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		12FFA6082904086800719F77 /* Build configuration list for PBXNativeTarget "zoomable-contentTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				12FFA6092904086800719F77 /* Debug */,
-				12FFA60A2904086800719F77 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		12FFA60B2904086800719F77 /* Build configuration list for PBXNativeTarget "zoomable-contentUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				12FFA60C2904086800719F77 /* Debug */,
-				12FFA60D2904086800719F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
