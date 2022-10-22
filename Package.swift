@@ -21,5 +21,9 @@ let package = Package(
         .target(
             name: "ZoomableImage",
             path: "Sources"),
+	    exclude: [
+                "zoomable_contentApp.swift",
+                "Preview Content"
+            ],
     ]
 )
