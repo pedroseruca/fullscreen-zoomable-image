@@ -12,8 +12,6 @@
 		12FFA5F62904086800719F77 /* zoomable_contentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA5F52904086800719F77 /* zoomable_contentTests.swift */; };
 		12FFA6002904086800719F77 /* zoomable_contentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA5FF2904086800719F77 /* zoomable_contentUITests.swift */; };
 		12FFA6022904086800719F77 /* zoomable_contentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */; };
-		12FFA61429043C5600719F77 /* ZoomableImage in Resources */ = {isa = PBXBuildFile; fileRef = 12FFA61329043C5600719F77 /* ZoomableImage */; };
-		12FFA61729043D4F00719F77 /* ZoomableImage in Frameworks */ = {isa = PBXBuildFile; productRef = 12FFA61629043D4F00719F77 /* ZoomableImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +40,6 @@
 		12FFA5FB2904086800719F77 /* zoomable-contentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zoomable-contentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FFA5FF2904086800719F77 /* zoomable_contentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentUITests.swift; sourceTree = "<group>"; };
 		12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		12FFA61329043C5600719F77 /* ZoomableImage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ZoomableImage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FFA61729043D4F00719F77 /* ZoomableImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +70,10 @@
 		12FFA5D82904086600719F77 = {
 			isa = PBXGroup;
 			children = (
-				12FFA61329043C5600719F77 /* ZoomableImage */,
 				12FFA5E32904086600719F77 /* zoomable-content */,
 				12FFA5F42904086800719F77 /* zoomable-contentTests */,
 				12FFA5FE2904086800719F77 /* zoomable-contentUITests */,
 				12FFA5E22904086600719F77 /* Products */,
-				12FFA61529043D4F00719F77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,13 +121,6 @@
 			path = "zoomable-contentUITests";
 			sourceTree = "<group>";
 		};
-		12FFA61529043D4F00719F77 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,7 +138,6 @@
 			);
 			name = "zoomable-content";
 			packageProductDependencies = (
-				12FFA61629043D4F00719F77 /* ZoomableImage */,
 			);
 			productName = "zoomable-content";
 			productReference = 12FFA5E12904086600719F77 /* zoomable-content.app */;
@@ -242,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				12FFA5EC2904086800719F77 /* Preview Assets.xcassets in Resources */,
-				12FFA61429043C5600719F77 /* ZoomableImage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,13 +577,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		12FFA61629043D4F00719F77 /* ZoomableImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ZoomableImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 12FFA5D92904086600719F77 /* Project object */;
 }
