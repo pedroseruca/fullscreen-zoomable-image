@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ZoomableImage
 
 @main
 struct zoomable_contentApp: App {

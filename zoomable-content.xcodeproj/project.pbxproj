@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12FFA5E52904086600719F77 /* zoomable_contentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA5E42904086600719F77 /* zoomable_contentApp.swift */; };
-		12FFA5EC2904086800719F77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12FFA5EB2904086800719F77 /* Preview Assets.xcassets */; };
-		12FFA5F62904086800719F77 /* zoomable_contentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA5F52904086800719F77 /* zoomable_contentTests.swift */; };
-		12FFA6002904086800719F77 /* zoomable_contentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA5FF2904086800719F77 /* zoomable_contentUITests.swift */; };
-		12FFA6022904086800719F77 /* zoomable_contentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */; };
+		12FFA6242904490500719F77 /* ZoomableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA61E2904490400719F77 /* ZoomableImage.swift */; };
+		12FFA6252904490500719F77 /* ZoomGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA61F2904490400719F77 /* ZoomGesture.swift */; };
+		12FFA6262904490500719F77 /* PinchZoomContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA6202904490400719F77 /* PinchZoomContext.swift */; };
+		12FFA6272904490500719F77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12FFA6222904490400719F77 /* Preview Assets.xcassets */; };
+		12FFA6282904490500719F77 /* zoomable_contentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA6232904490500719F77 /* zoomable_contentApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +33,13 @@
 
 /* Begin PBXFileReference section */
 		12FFA5E12904086600719F77 /* zoomable-content.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zoomable-content.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		12FFA5E42904086600719F77 /* zoomable_contentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentApp.swift; sourceTree = "<group>"; };
-		12FFA5EB2904086800719F77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		12FFA5F12904086800719F77 /* zoomable-contentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zoomable-contentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		12FFA5F52904086800719F77 /* zoomable_contentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentTests.swift; sourceTree = "<group>"; };
 		12FFA5FB2904086800719F77 /* zoomable-contentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zoomable-contentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		12FFA5FF2904086800719F77 /* zoomable_contentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentUITests.swift; sourceTree = "<group>"; };
-		12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12FFA61E2904490400719F77 /* ZoomableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableImage.swift; sourceTree = "<group>"; };
+		12FFA61F2904490400719F77 /* ZoomGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomGesture.swift; sourceTree = "<group>"; };
+		12FFA6202904490400719F77 /* PinchZoomContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchZoomContext.swift; sourceTree = "<group>"; };
+		12FFA6222904490400719F77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		12FFA6232904490500719F77 /* zoomable_contentApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zoomable_contentApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +70,10 @@
 		12FFA5D82904086600719F77 = {
 			isa = PBXGroup;
 			children = (
-				12FFA5E32904086600719F77 /* zoomable-content */,
-				12FFA5F42904086800719F77 /* zoomable-contentTests */,
-				12FFA5FE2904086800719F77 /* zoomable-contentUITests */,
 				12FFA5E22904086600719F77 /* Products */,
+				12FFA61C2904490400719F77 /* Sources */,
+				12FFA6232904490500719F77 /* zoomable_contentApp.swift */,
+				12FFA6212904490400719F77 /* Preview Content */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,38 +87,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		12FFA5E32904086600719F77 /* zoomable-content */ = {
+		12FFA61C2904490400719F77 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				12FFA5E42904086600719F77 /* zoomable_contentApp.swift */,
-				12FFA5EA2904086800719F77 /* Preview Content */,
+				12FFA61D2904490400719F77 /* ZoomableImage */,
 			);
-			path = "zoomable-content";
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		12FFA5EA2904086800719F77 /* Preview Content */ = {
+		12FFA61D2904490400719F77 /* ZoomableImage */ = {
 			isa = PBXGroup;
 			children = (
-				12FFA5EB2904086800719F77 /* Preview Assets.xcassets */,
+				12FFA61E2904490400719F77 /* ZoomableImage.swift */,
+				12FFA61F2904490400719F77 /* ZoomGesture.swift */,
+				12FFA6202904490400719F77 /* PinchZoomContext.swift */,
+			);
+			path = ZoomableImage;
+			sourceTree = "<group>";
+		};
+		12FFA6212904490400719F77 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				12FFA6222904490400719F77 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		12FFA5F42904086800719F77 /* zoomable-contentTests */ = {
-			isa = PBXGroup;
-			children = (
-				12FFA5F52904086800719F77 /* zoomable_contentTests.swift */,
-			);
-			path = "zoomable-contentTests";
-			sourceTree = "<group>";
-		};
-		12FFA5FE2904086800719F77 /* zoomable-contentUITests */ = {
-			isa = PBXGroup;
-			children = (
-				12FFA5FF2904086800719F77 /* zoomable_contentUITests.swift */,
-				12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */,
-			);
-			path = "zoomable-contentUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +183,7 @@
 				TargetAttributes = {
 					12FFA5E02904086600719F77 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					12FFA5F02904086800719F77 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -227,7 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FFA5EC2904086800719F77 /* Preview Assets.xcassets in Resources */,
+				12FFA6272904490500719F77 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FFA5E52904086600719F77 /* zoomable_contentApp.swift in Sources */,
+				12FFA6282904490500719F77 /* zoomable_contentApp.swift in Sources */,
+				12FFA6252904490500719F77 /* ZoomGesture.swift in Sources */,
+				12FFA6242904490500719F77 /* ZoomableImage.swift in Sources */,
+				12FFA6262904490500719F77 /* PinchZoomContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FFA5F62904086800719F77 /* zoomable_contentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FFA6002904086800719F77 /* zoomable_contentUITests.swift in Sources */,
-				12FFA6022904086800719F77 /* zoomable_contentUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,9 +401,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"zoomable-content/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = M3FQH2799X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -427,6 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pedroseruca.zoomable-content";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -437,9 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"zoomable-content/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = M3FQH2799X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
