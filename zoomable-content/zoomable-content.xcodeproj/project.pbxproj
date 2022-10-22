@@ -74,7 +74,7 @@
 		12FFA5D82904086600719F77 = {
 			isa = PBXGroup;
 			children = (
-				12FFA61229043B3C00719F77 /* Package */,
+				12FFA61329043C5600719F77 /* ZoomableImage */,
 				12FFA5E32904086600719F77 /* zoomable-content */,
 				12FFA5F42904086800719F77 /* zoomable-contentTests */,
 				12FFA5FE2904086800719F77 /* zoomable-contentUITests */,
@@ -125,14 +125,6 @@
 				12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */,
 			);
 			path = "zoomable-contentUITests";
-			sourceTree = "<group>";
-		};
-		12FFA61229043B3C00719F77 /* Package */ = {
-			isa = PBXGroup;
-			children = (
-				12FFA61329043C5600719F77 /* ZoomableImage */,
-			);
-			path = Package;
 			sourceTree = "<group>";
 		};
 		12FFA61529043D4F00719F77 /* Frameworks */ = {
