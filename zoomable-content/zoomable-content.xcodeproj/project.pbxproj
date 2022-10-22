@@ -13,6 +13,8 @@
 		12FFA5F62904086800719F77 /* zoomable_contentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA5F52904086800719F77 /* zoomable_contentTests.swift */; };
 		12FFA6002904086800719F77 /* zoomable_contentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA5FF2904086800719F77 /* zoomable_contentUITests.swift */; };
 		12FFA6022904086800719F77 /* zoomable_contentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */; };
+		12FFA60F2904375500719F77 /* PinchZoomContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA60E2904375500719F77 /* PinchZoomContext.swift */; };
+		12FFA6112904379100719F77 /* ZoomGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA6102904379100719F77 /* ZoomGesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		12FFA5FB2904086800719F77 /* zoomable-contentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zoomable-contentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FFA5FF2904086800719F77 /* zoomable_contentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentUITests.swift; sourceTree = "<group>"; };
 		12FFA6012904086800719F77 /* zoomable_contentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomable_contentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12FFA60E2904375500719F77 /* PinchZoomContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchZoomContext.swift; sourceTree = "<group>"; };
+		12FFA6102904379100719F77 /* ZoomGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomGesture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			children = (
 				12FFA5E42904086600719F77 /* zoomable_contentApp.swift */,
 				12FFA5E62904086600719F77 /* ZoomableImage.swift */,
+				12FFA60E2904375500719F77 /* PinchZoomContext.swift */,
+				12FFA6102904379100719F77 /* ZoomGesture.swift */,
 				12FFA5EA2904086800719F77 /* Preview Content */,
 			);
 			path = "zoomable-content";
@@ -253,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FFA6112904379100719F77 /* ZoomGesture.swift in Sources */,
 				12FFA5E72904086600719F77 /* ZoomableImage.swift in Sources */,
 				12FFA5E52904086600719F77 /* zoomable_contentApp.swift in Sources */,
+				12FFA60F2904375500719F77 /* PinchZoomContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
