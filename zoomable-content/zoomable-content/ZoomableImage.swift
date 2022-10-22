@@ -10,6 +10,10 @@ import SwiftUI
 struct ZoomableImage: View {
     private let image: Image
 
+    @State private var offset: CGPoint = .zero
+    @State private var scale: CGFloat = .zero
+    @State private var scalePosition: CGPoint = .zero
+
     init(@ViewBuilder _ image: () -> Image) {
         self.image = image()
     }
@@ -26,41 +30,56 @@ struct ZoomableImage: View {
 
     @ViewBuilder
     private func background(proxy: GeometryProxy) -> some View {
+        let offsetX = (offset.x + scalePosition.x) / 1.5
+        let blurRadius: CGFloat = 50
         image
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: proxy.size.width, height: proxy.size.height)
-            .offset(x: 0)
+            .frame(width: proxy.size.width + blurRadius, height: proxy.size.height + blurRadius)
+            .offset(x: offsetX)
             .clipped()
-            .blur(radius: 50)
+            .blur(radius: blurRadius / 2)
+            .padding(-blurRadius / 2)
+            .overlay {
+                Rectangle()
+                    .fill(.black)
+                    .opacity(0.2)
+                    .ignoresSafeArea()
+            }
     }
 
     @ViewBuilder
     private func image(proxy: GeometryProxy) -> some View {
-        image
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: proxy.size.width, alignment: .center)
-            .pinchZoom()
-    }
-}
-
-extension View {
-    func pinchZoom() -> some View {
-        PinchZoomContext { self }
+        PinchZoomContext(
+            offset: $offset,
+            scale: $scale,
+            scalePosition: $scalePosition
+        ) {
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: proxy.size.width, alignment: .center)
+        }
     }
 }
 
 struct PinchZoomContext<Content>: View where Content: View {
     private var content: Content
 
-    init(@ViewBuilder _ content: () -> Content) {
+    @Binding var offset: CGPoint
+    @Binding var scale: CGFloat
+    @Binding var scalePosition: CGPoint
+
+    init(offset: Binding<CGPoint>,
+         scale: Binding<CGFloat>,
+         scalePosition: Binding<CGPoint>,
+         @ViewBuilder _ content: () -> Content
+    ) {
+        _offset = offset
+        _scale = scale
+        _scalePosition = scalePosition
         self.content = content()
     }
-
-    @State var offset: CGPoint = .zero
-    @State var scale: CGFloat = .zero
-    @State var scalePosition: CGPoint = .zero
 
     var body: some View {
         content
@@ -78,7 +97,7 @@ struct PinchZoomContext<Content>: View where Content: View {
                 }
             }
             .scaleEffect(
-                1 + (scale < 0 ? 0 : scale),
+                1 + limitScale,
                 anchor: .init(
                     x: scalePosition.x,
                     y: scalePosition.y
@@ -91,6 +110,16 @@ struct PinchZoomContext<Content>: View where Content: View {
                     }
                 }
             }
+    }
+
+    private var limitScale: CGFloat {
+        if scale < 0 {
+            return 0
+        }
+        if scale > 4 {
+            return 4
+        }
+        return scale
     }
 }
 
