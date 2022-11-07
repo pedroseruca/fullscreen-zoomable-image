@@ -11,17 +11,26 @@ struct PinchZoomContext<Content>: View where Content: View {
     private var content: Content
 
     @Binding private var offset: CGPoint
+    @Binding private var backgroundOpacity: CGFloat
     @Binding private var scale: CGFloat
     @Binding private var scalePosition: CGPoint
+    @Binding private var isVisible: Bool
+    private var totalHeight: CGFloat
 
     init(offset: Binding<CGPoint>,
+         backgroundOpacity: Binding<CGFloat>,
          scale: Binding<CGFloat>,
          scalePosition: Binding<CGPoint>,
+         isVisible: Binding<Bool>,
+         totalHeight: CGFloat,
          @ViewBuilder _ content: () -> Content
     ) {
         _offset = offset
+        _backgroundOpacity = backgroundOpacity
         _scale = scale
         _scalePosition = scalePosition
+        _isVisible = isVisible
+        self.totalHeight = totalHeight
         self.content = content()
     }
 
@@ -32,9 +41,12 @@ struct PinchZoomContext<Content>: View where Content: View {
                 GeometryReader { proxy in
                     ZoomGesture(
                         size: proxy.size,
+                        totalHeight: totalHeight,
                         offset: $offset,
+                        backgroundOpacity: $backgroundOpacity,
                         scale: $scale,
-                        scalePosition: $scalePosition
+                        scalePosition: $scalePosition,
+                        isVisible: $isVisible
                     )
                 }
             }
