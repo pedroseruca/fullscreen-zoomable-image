@@ -11,18 +11,31 @@ import SwiftUI
 struct zoomable_contentApp: App {
     var body: some Scene {
         WindowGroup {
-            ZoomableImage {
+            ZoomableContent(isVisible: .constant(true)) {
                 Image("iphones")
+                    .resizable()
             }
+            .ignoresSafeArea()
         }
     }
 }
 
 struct ZoomableImage_Previews: PreviewProvider {
     static var previews: some View {
-        ZoomableImage {
+        ZoomableContent(isVisible: .constant(true)) {
             Image("iphones")
+                .resizable()
         }
         .ignoresSafeArea()
+        
+        ZoomableContent(isVisible: .constant(true)) {
+            ZStack {
+                Rectangle()
+                    .fill(Color.red.gradient)
+                Text("Content test")
+            }
+        }
+        .ignoresSafeArea()
+        .previewDisplayName("with Content")
     }
 }
